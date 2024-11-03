@@ -9,10 +9,23 @@
 	min-height: initial !important;
 }
 
+/* Menambahkan sudut membulat pada setiap tab dan latar belakangnya */
+#tabbrowser-tabs .tabbrowser-tab,
+#tabbrowser-tabs .tab-background {
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    margin-left: 2px !important;
+    margin-top: 1px !important;
+    margin-bottom: 1px !important;
+}
+
+
+
 /* Fix pinned tabs height where tabs amount activates scrollbox*/
 .tabbrowser-tab {
 	min-height: var(--tab-min-height);
 	padding-inline: 2px !important;
+	border-radius: 15px
 }
 
 
@@ -30,7 +43,7 @@ tab>stack {
 }
 
 #TabsToolbar .toolbar-items {
-	margin-bottom: -1px !important;
+	margin-bottom: 3px !important;
 }
 
 :root[tabsintitlebar][inFullscreen] #TabsToolbar .toolbar-items {

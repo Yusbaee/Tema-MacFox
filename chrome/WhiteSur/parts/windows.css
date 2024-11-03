@@ -1,19 +1,38 @@
-/* Windows specific */
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 @media (-moz-platform: windows) {
     .titlebar-button {
         border: none;
-        margin: 0 !important;
-        /*		padding: 3px 6px !important;
-*/
+        margin: 0 7px !important;
         padding: 1px 3px !important;
+        width: 25px !important;
+        height: 25px !important;
+        background-color: transparent !important;
         -moz-content-properties: none !important;
         stroke: none !important;
     }
 
-    :root[tabsintitlebar][sizemode="maximized"] #titlebar {
-        appearance: none !important;
+    :root[tabsintitlebar] #titlebar .titlebar-buttonbox-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 15px !important; /* Adjust this to move buttons upwards or downwards */
     }
+
+    :root[tabsintitlebar][sizemode="maximized"] .titlebar-buttonbox {
+        top: 1px;
+        left: 10px;
+    }
+
+    .titlebar-buttonbox-container, #PanelUI-button {
+        padding-top: 0 !important;
+    }
+
+    .titlebar-buttonbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 
     :root[tabsintitlebar]:not([sizemode="maximized"]) #titlebar .titlebar-buttonbox-container {
         top: 17px !important;
@@ -55,4 +74,3 @@
     .PanelUI-subView{
         background: var(--gnome-menu-background) !important;
     }
-}

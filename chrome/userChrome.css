@@ -4,3 +4,37 @@
 @import "WhiteSur/theme.css"; /**/
 
 @import "customChrome.css"; /**/
+
+/* Mengatur Posisi Search Bar, Tab Bar, dan Bookmark Bar */
+#navigator-toolbox {
+    display: flex !important;
+    flex-direction: column !important;
+    
+}
+
+/* Urutan Elemen */
+#nav-bar {
+    order: 1 !important; /* Search bar berada paling atas */
+    
+}
+
+#TabsToolbar {
+    order: 2 !important; /* Tab bar berada di tengah */
+}
+
+#PersonalToolbar {
+    order: 3 !important; /* Bookmark bar berada paling bawah */
+}
+
+/* Memastikan Bookmark Bar Selalu Tampil */
+#PersonalToolbar {
+    visibility: visible !important;
+    display: -moz-box !important;
+    align-items: center !important; 
+}
+/* 
+.titlebar-buttonbox-container .titlebar-button {
+    width: 20px !important;
+    height: 20px !important;
+} */
+
